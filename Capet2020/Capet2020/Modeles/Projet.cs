@@ -54,5 +54,27 @@ namespace Capet2020.Modeles
         public Collaborateur LeResponsable { get => _leResponsable; set => _leResponsable = value; }
         #endregion
 
+        #region Méthodes
+        public float pourcentageAvancement()
+        {
+            float pourcentage;
+            int compteurTerminé = 0;
+            int compteur = 0;
+            foreach( Lot leLot in this.lesLots)
+            {
+                foreach( Tache laTache in leLot.LesTaches )
+                {
+                    if(laTache.Etat == "terminé")
+                    {
+                        compteurTerminé++;
+                    }
+                    compteur++;
+                }
+            }
+
+            pourcentage = compteurTerminé / compteur;
+            return pourcentage;
+        }
+        #endregion
     }
 }
