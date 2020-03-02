@@ -20,26 +20,38 @@ namespace Capet2020.Modeles
         private DateTime _dateFinReelle;
         private string _etat;
 
-        private Responsable leResponsable;
+        private Collaborateur _leResponsable;
         private ArrayList lesLots;
         private Dictionary<DateTime, Tache> lesTachesRestantARealiser;
         #endregion
 
         #region Constructeurs
-        public Projet(int idProjet, string intituleProjet, DateTime dateDebutPrevue, DateTime dateDebutReelle, DateTime dateFinPrevue, DateTime dateFinReelle, string etat, Responsable leResponsable)
+        public Projet(int idProjet, string intituleProjet, DateTime dateDebutPrevue, DateTime dateDebutReelle, DateTime dateFinPrevue, DateTime dateFinReelle, string etat, Collaborateur leResponsable)
         {
-            _idProjet = idProjet;
-            _intituleProjet = intituleProjet;
-            _dateDebutPrevue = dateDebutPrevue;
-            _dateDebutReelle = dateDebutReelle;
-            _dateFinPrevue = dateFinPrevue;
-            _dateFinReelle = dateFinReelle;
-            _etat = etat;
-            lesLots = new ArrayList();
-            leResponsable = leResponsable;
+            IdProjet = idProjet;
+            IntituleProjet = intituleProjet;
+            DateDebutPrevue = dateDebutPrevue;
+            DateDebutReelle = dateDebutReelle;
+            DateFinPrevue = dateFinPrevue;
+            DateFinReelle = dateFinReelle;
+            Etat = etat;
+            LesLots = new ArrayList();
+            LeResponsable = leResponsable;
 
             CollClassProjet.Add(this);
         }
+        #endregion
+
+        #region get/set
+        public int IdProjet { get => _idProjet; set => _idProjet = value; }
+        public string IntituleProjet { get => _intituleProjet; set => _intituleProjet = value; }
+        public DateTime DateDebutPrevue { get => _dateDebutPrevue; set => _dateDebutPrevue = value; }
+        public DateTime DateDebutReelle { get => _dateDebutReelle; set => _dateDebutReelle = value; }
+        public DateTime DateFinPrevue { get => _dateFinPrevue; set => _dateFinPrevue = value; }
+        public DateTime DateFinReelle { get => _dateFinReelle; set => _dateFinReelle = value; }
+        public string Etat { get => _etat; set => _etat = value; }
+        public ArrayList LesLots { get => lesLots; set => lesLots = value; }
+        public Collaborateur LeResponsable { get => _leResponsable; set => _leResponsable = value; }
         #endregion
 
     }
