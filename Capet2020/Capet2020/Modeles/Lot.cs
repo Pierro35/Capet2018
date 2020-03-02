@@ -31,6 +31,7 @@ namespace Capet2020.Modeles
         public DateTime DateFinReelle { get => _dateFinReelle; set => _dateFinReelle = value; }
         public string Etat { get => _etat; set => _etat = value; }
         internal Projet LeProjet { get => leProjet; set => leProjet = value; }
+        public ArrayList LesTaches { get => lesTaches; set => lesTaches = value; }
         #endregion
 
         #region Constructeur
@@ -43,8 +44,8 @@ namespace Capet2020.Modeles
             DateFinReelle = dateFinReelle;
             Etat = etat;
             this.LeProjet = leProjet;
-            this.lesTaches = new ArrayList();
-            this.lesTaches = lesTaches;
+            this.LesTaches = new ArrayList();
+            this.LesTaches = lesTaches;
         }
 
         #endregion
