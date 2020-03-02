@@ -34,7 +34,7 @@ namespace Capet2020.Modeles
         #endregion
 
         #region Constructeur
-        public Lot(int idLot, DateTime dateDebutPrevue, DateTime dateDebutReele, DateTime dateFinPrevue, DateTime dateFinReelle, string etat, Projet leProjet)
+        public Lot(int idLot, DateTime dateDebutPrevue, DateTime dateDebutReele, DateTime dateFinPrevue, DateTime dateFinReelle, string etat, Projet leProjet, ArrayList lesTaches)
         {
             IdLot = idLot;
             DateDebutPrevue = dateDebutPrevue;
@@ -44,11 +44,21 @@ namespace Capet2020.Modeles
             Etat = etat;
             this.LeProjet = leProjet;
             this.lesTaches = new ArrayList();
+            this.lesTaches = lesTaches;
         }
-        
+
         #endregion
 
+        #region Methode
+        public void donneNbTachesTerminees()
+        {
+            foreach (var item in collection)
+            {
 
+            }
+        }
+
+        #endregion
 
 
 
