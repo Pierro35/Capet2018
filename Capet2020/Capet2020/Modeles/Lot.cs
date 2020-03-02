@@ -50,12 +50,19 @@ namespace Capet2020.Modeles
         #endregion
 
         #region Methode
-        public void donneNbTachesTerminees()
+        public int donneNbTachesTerminees()
         {
-            foreach (var item in collection)
-            {
+            int resultat = 0;
 
+            foreach (Tache uneTAche in lesTaches)
+            {
+                if (uneTAche.Etat == "terminée")
+                {
+                  resultat = + 1;
+                }
             }
+
+            return resultat;
         }
 
         #endregion
