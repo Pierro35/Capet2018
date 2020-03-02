@@ -59,6 +59,25 @@ namespace Capet2020.Modeles
             }
         }
 
+
+        public float pourcentageAvancement()
+        {
+            float pourcentage;
+            int compteurTerminé = 0;
+            int compteur = 0;
+            foreach (Tache laTache in this.LesTaches)
+                {
+                    if (laTache.Etat == "terminé")
+                    {
+                        compteurTerminé++;
+                    }
+                    compteur++;
+                }
+            
+
+            pourcentage = compteurTerminé / compteur;
+            return pourcentage;
+        }
         #endregion
 
 
