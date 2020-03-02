@@ -11,6 +11,7 @@ namespace Capet2020.Modeles
     {
         #region Atribut
         public static ArrayList CollClassLot = new ArrayList();
+        private ArrayList lesTaches;
 
         private int _idLot;
         private DateTime _dateDebutPrevue;
@@ -19,9 +20,34 @@ namespace Capet2020.Modeles
         private DateTime _dateFinReelle;
         private string _etat;
 
-        private ArrayList lesTaches;
         private Projet leProjet;
         #endregion
+
+        #region Getter / Setter
+        public int IdLot { get => _idLot; set => _idLot = value; }
+        public DateTime DateDebutPrevue { get => _dateDebutPrevue; set => _dateDebutPrevue = value; }
+        public DateTime DateDebutReele { get => _dateDebutReele; set => _dateDebutReele = value; }
+        public DateTime DateFinPrevue { get => _dateFinPrevue; set => _dateFinPrevue = value; }
+        public DateTime DateFinReelle { get => _dateFinReelle; set => _dateFinReelle = value; }
+        public string Etat { get => _etat; set => _etat = value; }
+        internal Projet LeProjet { get => leProjet; set => leProjet = value; }
+        #endregion
+
+        #region Constructeur
+        public Lot(int idLot, DateTime dateDebutPrevue, DateTime dateDebutReele, DateTime dateFinPrevue, DateTime dateFinReelle, string etat, Projet leProjet)
+        {
+            IdLot = idLot;
+            DateDebutPrevue = dateDebutPrevue;
+            DateDebutReele = dateDebutReele;
+            DateFinPrevue = dateFinPrevue;
+            DateFinReelle = dateFinReelle;
+            Etat = etat;
+            this.LeProjet = leProjet;
+            this.lesTaches = new ArrayList();
+        }
+        
+        #endregion
+
 
 
 
