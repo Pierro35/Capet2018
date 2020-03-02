@@ -55,17 +55,24 @@ namespace Capet2020.Modeles
         #endregion
 
         #region Méthodes
-        public int pourcentageAvancement()
+        public float pourcentageAvancement()
         {
-            int pourcentage;
-
-            foreach( Lot leLot in lesLots)
+            float pourcentage;
+            int compteurTerminé = 0;
+            int compteur = 0;
+            foreach( Lot leLot in this.lesLots)
             {
-                foreach( Tache laTache in leLot.LesTaches
-                    )
-
-                { }
+                foreach( Tache laTache in leLot.LesTaches )
+                {
+                    if(laTache.Etat == "terminé")
+                    {
+                        compteurTerminé++;
+                    }
+                    compteur++;
+                }
             }
+
+            pourcentage = compteurTerminé / compteur;
             return pourcentage;
         }
         #endregion
