@@ -27,6 +27,14 @@ namespace Capet2020.Modeles
 
             CollClassCollaborateur.Add(this);
         }
+
+        public Collaborateur(int idCollaborateur, int nomCollaborateur)
+        {
+            IdCollaborateur = idCollaborateur;
+            NomCollaborateur = nomCollaborateur;
+
+            CollClassCollaborateur.Add(this);
+        }
         #endregion
 
         #region Get/Set
@@ -35,5 +43,11 @@ namespace Capet2020.Modeles
         public Service LeService { get => _leService; set => _leService = value; }
         #endregion
 
+        #region Méthodes
+        public void ajouterService(Service leService)
+        {
+            this.LeService = leService;
+        }
+        #endregion
     }
 }

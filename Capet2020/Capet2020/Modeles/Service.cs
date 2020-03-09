@@ -27,12 +27,27 @@ namespace Capet2020.Modeles
 
             CollClassService.Add(this);
         }
+
+        public Service(int idService, string nomService)
+        {
+            IdService = idService;
+            NomService = nomService;
+
+            CollClassService.Add(this);
+        }
         #endregion
 
         #region Get/Set
         public int IdService { get => _idService; set => _idService = value; }
         public string NomService { get => _nomService; set => _nomService = value; }
         public Collaborateur LeResponsable { get => _leResponsable; set => _leResponsable = value; }
+        #endregion
+
+        #region Méthodes
+        public void ajouterService(Collaborateur leResponsable)
+        {
+            this.LeResponsable = leResponsable;
+        }
         #endregion
     }
 }
