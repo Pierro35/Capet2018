@@ -22,7 +22,7 @@ namespace Capet2020.Modeles
 
         private Collaborateur _leResponsable;
         private ArrayList lesLots;
-        private Dictionary<DateTime, Tache> lesTachesRestantARealiser;
+        private Dictionary<Tache, DateTime> lesTachesRestantARealiser;
         #endregion
 
         #region Constructeurs
@@ -50,6 +50,7 @@ namespace Capet2020.Modeles
         public string Etat { get => _etat; set => _etat = value; }
         public ArrayList LesLots { get => lesLots; set => lesLots = value; }
         public Collaborateur LeResponsable { get => _leResponsable; set => _leResponsable = value; }
+        public Dictionary<Tache, DateTime> LesTachesRestantARealiser { get => lesTachesRestantARealiser; set => lesTachesRestantARealiser = value; }
         #endregion
 
         #region Méthodes

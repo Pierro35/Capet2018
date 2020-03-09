@@ -20,6 +20,7 @@ namespace Capet2020.Modeles
         private int _dureePrevue;
         private int _dureeRelle;
         private string _etat;
+        private Projet leProjet;
         #endregion
 
         #region Constructeur
@@ -31,6 +32,7 @@ namespace Capet2020.Modeles
             DureePrevue = dureePrevue;
             Etat = etat;
             this.lesCollaborateurs = new ArrayList();
+            leProjet.LesTachesRestantARealiser.Add(this, dateDebutPrevue);
         }
         #endregion
 
