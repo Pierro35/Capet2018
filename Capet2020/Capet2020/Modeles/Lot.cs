@@ -74,7 +74,7 @@ namespace Capet2020.Modeles
             int compteur = 0;
             foreach (Tache laTache in this.LesTaches)
                 {
-                    if (laTache.Etat == "terminé")
+                    if (laTache.Etat == "terminée")
                     {
                         compteurTerminé++;
                     }

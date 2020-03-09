@@ -23,14 +23,12 @@ namespace Capet2020.Modeles
         #endregion
 
         #region Constructeur
-        public Tache(int idTache, string intituleTache, DateTime dateDebutPrevue, DateTime dateDebitRelle, int dureePrevue, int dureeRelle, string etat)
+        public Tache(int idTache, string intituleTache, DateTime dateDebutPrevue, int dureePrevue, string etat)
         {
             IdTache = idTache;
             IntituleTache = intituleTache;
             DateDebutPrevue = dateDebutPrevue;
-            DateDebitRelle = dateDebitRelle;
             DureePrevue = dureePrevue;
-            DureeRelle = dureeRelle;
             Etat = etat;
             this.lesCollaborateurs = new ArrayList();
         }
@@ -44,6 +42,18 @@ namespace Capet2020.Modeles
         public int DureePrevue { get => _dureePrevue; set => _dureePrevue = value; }
         public int DureeRelle { get => _dureeRelle; set => _dureeRelle = value; }
         public string Etat { get => _etat; set => _etat = value; }
+        #endregion
+
+        #region Méthodes
+        public void ajouterDateDebutRelle(DateTime dateDebutRelle)
+        {
+            this.DateDebutPrevue = dateDebutRelle;
+        }
+
+        public void ajouterDureeRelle(int dureeRelle)
+        {
+            this.DureeRelle = dureeRelle;
+        }
         #endregion
     }
 }
