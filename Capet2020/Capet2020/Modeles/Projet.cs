@@ -26,14 +26,12 @@ namespace Capet2020.Modeles
         #endregion
 
         #region Constructeurs
-        public Projet(int idProjet, string intituleProjet, DateTime dateDebutPrevue, DateTime dateDebutReelle, DateTime dateFinPrevue, DateTime dateFinReelle, string etat, Collaborateur leResponsable)
+        public Projet(int idProjet, string intituleProjet, DateTime dateDebutPrevue, DateTime dateFinPrevue, string etat, Collaborateur leResponsable)
         {
             IdProjet = idProjet;
             IntituleProjet = intituleProjet;
             DateDebutPrevue = dateDebutPrevue;
-            DateDebutReelle = dateDebutReelle;
             DateFinPrevue = dateFinPrevue;
-            DateFinReelle = dateFinReelle;
             Etat = etat;
             LesLots = new ArrayList();
             LeResponsable = leResponsable;

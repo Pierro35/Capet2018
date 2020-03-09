@@ -35,13 +35,11 @@ namespace Capet2020.Modeles
         #endregion
 
         #region Constructeur
-        public Lot(int idLot, DateTime dateDebutPrevue, DateTime dateDebutReele, DateTime dateFinPrevue, DateTime dateFinReelle, string etat, Projet leProjet, ArrayList lesTaches)
+        public Lot(int idLot, DateTime dateDebutPrevue, DateTime dateFinPrevue, string etat, Projet leProjet, ArrayList lesTaches)
         {
             IdLot = idLot;
             DateDebutPrevue = dateDebutPrevue;
-            DateDebutReele = dateDebutReele;
             DateFinPrevue = dateFinPrevue;
-            DateFinReelle = dateFinReelle;
             Etat = etat;
             this.LeProjet = leProjet;
             this.LesTaches = new ArrayList();
