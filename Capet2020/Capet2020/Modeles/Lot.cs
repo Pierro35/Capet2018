@@ -85,6 +85,19 @@ namespace Capet2020.Modeles
             pourcentage = compteurTerminé / compteur;
             return pourcentage;
         }
+
+        public ArrayList donneTachesAAffecter()
+        {
+            ArrayList resultat;
+            foreach (Tache uneTache in LesTaches)
+            {
+                if (uneTache.Etat == "a affecter")
+                {
+                    resultat.Add(uneTache);
+                }
+            }
+            return resultat;
+        }
         #endregion
 
 
