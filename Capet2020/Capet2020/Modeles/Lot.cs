@@ -104,7 +104,7 @@ namespace Capet2020.Modeles
             {
                 this.LesTaches.Add(LeProjet.LesTachesRestantARealiser.First().Key);
                 LeProjet.LesTachesRestantARealiser.First().Key.Etat = "a affecter";
-                LeProjet.LesTachesRestantARealiser.Remove(LeProjet.LesTachesRestantARealiser.First().Key);
+                LeProjet.LesTachesRestantARealiser.Remove(LeProjet.LesTachesRestantARealiser.ElementAt(0).Key);
             }
         }
         #endregion
