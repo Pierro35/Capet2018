@@ -86,7 +86,7 @@ namespace Capet2020.Modeles
 
         public ArrayList donneTachesAAffecter()
         {
-            ArrayList resultat;
+            ArrayList resultat = new ArrayList();
             foreach (Tache uneTache in LesTaches)
             {
                 if (uneTache.Etat == "a affecter")
@@ -95,6 +95,17 @@ namespace Capet2020.Modeles
                 }
             }
             return resultat;
+        }
+
+        public void ajouterTache(int nombreTache)
+        {
+            LeProjet.LesTachesRestantARealiser = LeProjet.LesTachesRestantARealiser.OrderByDescending(value => value.Value).ToDictionary((keyItem) => keyItem.Key, (valueItem) => valueItem.Value);
+            for (int i = 0; i<nombreTache; i++)
+            {
+                this.LesTaches.Add(LeProjet.LesTachesRestantARealiser.First().Key);
+                LeProjet.LesTachesRestantARealiser.First().Key.Etat = "a affecter";
+                LeProjet.LesTachesRestantARealiser.Remove(LeProjet.LesTachesRestantARealiser.ElementAt(i).Key);
+            }
         }
         #endregion
 
